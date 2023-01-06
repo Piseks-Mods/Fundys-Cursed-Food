@@ -1,2 +1,2 @@
-# Fundys-Cursed-Food-Forge
- Fundy's Cursed Food from his video but on Forge
+# Fundy's Cursed Food (Forge)
+> Note: TBA
