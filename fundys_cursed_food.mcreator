@@ -1,9 +1,137 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "CreativeTab",
+      "type": "tab",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "creative_tab"
+    },
+    {
+      "name": "Steakchop",
+      "type": "item",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steakchop"
+    },
+    {
+      "name": "Steakcochop",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steakcochop"
+    },
+    {
+      "name": "Steakcochickchop",
+      "type": "item",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steakcochickchop"
+    },
+    {
+      "name": "Steakcochicarrochop",
+      "type": "item",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steakcochicarrochop"
+    },
+    {
+      "name": "Steakcochicarrochopie",
+      "type": "item",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steakcochicarrochopie"
+    },
+    {
+      "name": "SteakcochicarrochopiePie",
+      "type": "item",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steakcochicarrochopie_pie"
+    },
+    {
+      "name": "StapplecochicarrochopiePie",
+      "type": "item",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stapplecochicarrochopie_pie"
+    },
+    {
+      "name": "StabreadlecochicarrochopiePie",
+      "type": "item",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stabreadlecochicarrochopie_pie"
+    },
+    {
+      "name": "StabreabbitlecochicarrochopiePie",
+      "type": "item",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stabreabbitlecochicarrochopie_pie"
+    },
+    {
+      "name": "SalmotabreabbitlecochicarrochopiePie",
+      "type": "item",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "salmotabreabbitlecochicarrochopie_pie"
+    },
+    {
+      "name": "SalmuttotabreabbitlecochicarrochopiePie",
+      "type": "item",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "salmuttotabreabbitlecochicarrochopie_pie"
+    },
+    {
+      "name": "SalmuttotabreabbitlecochicarrochopotatiePie",
+      "type": "item",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "salmuttotabreabbitlecochicarrochopotatie_pie"
+    },
+    {
+      "name": "SalmuttotabreabbitlecochicarrochopotatiePieCake",
+      "type": "item",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "salmuttotabreabbitlecochicarrochopotatie_pie_cake"
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "item.fundys_cursed_food.steakchop": "Steakchop",
+      "item.fundys_cursed_food.salmotabreabbitlecochicarrochopie_pie": "Salmotabreabbitlecochicarrochopie Pie",
+      "item.fundys_cursed_food.steakcochop": "Steakcochop",
+      "item.fundys_cursed_food.steakcochickchop": "Steakcochickchop",
+      "itemGroup.tabcreative_tab": "Fundy\u0027s Cursed Food",
+      "item.fundys_cursed_food.steakcochicarrochopie": "Steakcochicarrochopie",
+      "item.fundys_cursed_food.stapplecochicarrochopie_pie": "Stapplecochicarrochopie Pie",
+      "item.fundys_cursed_food.steakcochicarrochopie_pie": "Steakcochicarrochopie Pie",
+      "item.fundys_cursed_food.steakcochicarrochop": "Steakcochicarrochop",
+      "item.fundys_cursed_food.stabreadlecochicarrochopie_pie": "Stabreadlecochicarrochopie Pie",
+      "item.fundys_cursed_food.stabreabbitlecochicarrochopie_pie": "Stabreabbitlecochicarrochopie Pie",
+      "item.fundys_cursed_food.salmuttotabreabbitlecochicarrochopotatie_pie": "Salmuttotabreabbitlecochicarrochopotatie Pie",
+      "item.fundys_cursed_food.salmuttotabreabbitlecochicarrochopotatie_pie_cake": "Salmuttotabreabbitlecochicarrochopotatie Pie Cake",
+      "item.fundys_cursed_food.salmuttotabreabbitlecochicarrochopie_pie": "Salmuttotabreabbitlecochicarrochopie Pie"
+    }
   },
   "foldersRoot": {
     "name": "~",
@@ -12,7 +140,7 @@
   "workspaceSettings": {
     "modid": "fundys_cursed_food",
     "modName": "Fundy\u0027s Cursed Food",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Fundy\u0027s Cursed Food from his video",
     "author": "Písek Pískovec",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/fundys-cursed-food",

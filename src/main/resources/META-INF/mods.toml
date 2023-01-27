@@ -1,14 +1,18 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-license="Academic Free License v3.0"
+license="Not specified"
 
 [[mods]]
 modId="fundys_cursed_food"
-version="1.0.0"
+version="1.0.4"
 displayName="Fundy's Cursed Food"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
-displayURL="https://mcreator.net"
-authors="pisek, MCreator"
+credits="Source code: https://github.com/Piseks-Mods/Fundys-Cursed-Food-Forge/"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/fundys-cursed-food"
+logoFile="logo.png"
+authors="Písek Pískovec"
+description='''
+Fundy's Cursed Food from his video
+'''
 
 [[dependencies.fundys_cursed_food]]
     modId="minecraft"
