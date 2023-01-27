@@ -1,0 +1,44 @@
+{
+  "_fv": 33,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "salmotabreabbitlecochicarrochopie_pie",
+    "customModelName": "Normal",
+    "name": "Salmotabreabbitlecochicarrochopie Pie",
+    "rarity": "COMMON",
+    "creativeTab": {
+      "value": "CUSTOM:CreativeTab"
+    },
+    "stackSize": 64,
+    "enchantability": 0,
+    "useDuration": 32,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInfo": [
+      "please stop."
+    ],
+    "hasGlow": true,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "isFood": true,
+    "nutritionalValue": 62,
+    "saturation": 62.4,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": true,
+    "isAlwaysEdible": false,
+    "animation": "eat"
+  }
+}
