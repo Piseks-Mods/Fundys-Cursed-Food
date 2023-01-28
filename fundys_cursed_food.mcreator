@@ -111,6 +111,42 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "salmuttotabreabbitlecochicarrochopotatie_pie_cake"
+    },
+    {
+      "name": "DieEatingProcedure",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "die_eating_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DieFeedingProcedure",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "die_feeding_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -119,6 +155,7 @@
     "en_us": {
       "item.fundys_cursed_food.steakchop": "Steakchop",
       "item.fundys_cursed_food.salmotabreabbitlecochicarrochopie_pie": "Salmotabreabbitlecochicarrochopie Pie",
+      "death.attack.heartAttack": "%1$s died of a Heart Attack",
       "item.fundys_cursed_food.steakcochop": "Steakcochop",
       "item.fundys_cursed_food.steakcochickchop": "Steakcochickchop",
       "itemGroup.tabcreative_tab": "Fundy\u0027s Cursed Food",
