@@ -1,0 +1,16 @@
+{
+  "group": "stapplecochicarrochopie_pie",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fundys_cursed_food:steakcochicarrochopie_pie"
+    },
+    {
+      "item": "minecraft:apple"
+    }
+  ],
+  "result": {
+    "item": "fundys_cursed_food:stapplecochicarrochopie_pie",
+    "count": 1
+  }
+}

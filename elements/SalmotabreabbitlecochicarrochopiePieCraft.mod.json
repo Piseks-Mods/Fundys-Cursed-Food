@@ -1,0 +1,46 @@
+{
+  "_fv": 33,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "salmotabreabbitlecochicarrochopie_pie",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:StabreabbitlecochicarrochopiePie"
+      },
+      {
+        "value": "Items.COOKED_FISH#1"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:SalmotabreabbitlecochicarrochopiePie"
+    },
+    "name": "salmotabreabbitlecochicarrochopie_pie",
+    "namespace": "mod"
+  }
+}

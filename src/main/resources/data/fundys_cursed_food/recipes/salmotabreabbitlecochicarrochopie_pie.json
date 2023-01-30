@@ -1,0 +1,16 @@
+{
+  "group": "salmotabreabbitlecochicarrochopie_pie",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fundys_cursed_food:stabreabbitlecochicarrochopie_pie"
+    },
+    {
+      "item": "minecraft:cooked_salmon"
+    }
+  ],
+  "result": {
+    "item": "fundys_cursed_food:salmotabreabbitlecochicarrochopie_pie",
+    "count": 1
+  }
+}

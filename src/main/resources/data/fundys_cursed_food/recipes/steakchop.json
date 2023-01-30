@@ -1,0 +1,16 @@
+{
+  "group": "steakchop",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:cooked_beef"
+    },
+    {
+      "item": "minecraft:cooked_porkchop"
+    }
+  ],
+  "result": {
+    "item": "fundys_cursed_food:steakchop",
+    "count": 1
+  }
+}

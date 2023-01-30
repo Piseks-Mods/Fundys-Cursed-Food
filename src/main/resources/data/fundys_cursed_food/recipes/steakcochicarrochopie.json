@@ -1,0 +1,16 @@
+{
+  "group": "steakcochicarrochopie",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fundys_cursed_food:steakcochicarrochop"
+    },
+    {
+      "item": "minecraft:cookie"
+    }
+  ],
+  "result": {
+    "item": "fundys_cursed_food:steakcochicarrochopie",
+    "count": 1
+  }
+}

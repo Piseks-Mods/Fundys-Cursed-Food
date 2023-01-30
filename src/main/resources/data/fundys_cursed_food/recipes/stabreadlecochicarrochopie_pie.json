@@ -1,0 +1,16 @@
+{
+  "group": "stabreadlecochicarrochopie_pie",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fundys_cursed_food:stapplecochicarrochopie_pie"
+    },
+    {
+      "item": "minecraft:bread"
+    }
+  ],
+  "result": {
+    "item": "fundys_cursed_food:stabreadlecochicarrochopie_pie",
+    "count": 1
+  }
+}

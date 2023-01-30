@@ -1,0 +1,16 @@
+{
+  "group": "steakcochicarrochop",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fundys_cursed_food:steakcochickchop"
+    },
+    {
+      "item": "minecraft:carrot"
+    }
+  ],
+  "result": {
+    "item": "fundys_cursed_food:steakcochicarrochop",
+    "count": 1
+  }
+}

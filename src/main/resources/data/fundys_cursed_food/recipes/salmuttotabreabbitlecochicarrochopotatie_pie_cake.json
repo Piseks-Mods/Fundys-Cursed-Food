@@ -1,0 +1,16 @@
+{
+  "group": "salmuttotabreabbitlecochicarrochopotatie_pie_cake",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fundys_cursed_food:salmuttotabreabbitlecochicarrochopotatie_pie"
+    },
+    {
+      "item": "minecraft:cake"
+    }
+  ],
+  "result": {
+    "item": "fundys_cursed_food:salmuttotabreabbitlecochicarrochopotatie_pie_cake",
+    "count": 1
+  }
+}
