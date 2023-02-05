@@ -63,7 +63,7 @@ public class DieFeedingProcedureProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-		if (((entity instanceof TameableEntity) ? ((TameableEntity) entity).getOwner() : null) == null) {
+		if (!((entity instanceof TameableEntity) ? ((TameableEntity) entity).isTamed() : false)) {
 			if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 					.getItem() == SalmuttotabreabbitlecochicarrochopotatiePieCakeItem.block) {
 				if (sourceentity instanceof LivingEntity) {
