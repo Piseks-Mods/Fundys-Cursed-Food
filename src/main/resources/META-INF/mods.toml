@@ -1,10 +1,10 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-license="Not specified"
+license="MIT License"
 
 [[mods]]
 modId="fundys_cursed_food"
-version="1.0.4"
+version="1.0.4.1"
 displayName="Fundy's Cursed Food"
 credits="Source code: https://github.com/Piseks-Mods/Fundys-Cursed-Food-Forge/"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/fundys-cursed-food"

@@ -281,11 +281,11 @@
   "workspaceSettings": {
     "modid": "fundys_cursed_food",
     "modName": "Fundy\u0027s Cursed Food",
-    "version": "1.0.4",
+    "version": "1.0.4.1",
     "description": "Fundy\u0027s Cursed Food from his video",
     "author": "Písek Pískovec",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/fundys-cursed-food",
-    "license": "Not specified",
+    "license": "MIT License",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "modPicture": "fundys_cursed_food",
