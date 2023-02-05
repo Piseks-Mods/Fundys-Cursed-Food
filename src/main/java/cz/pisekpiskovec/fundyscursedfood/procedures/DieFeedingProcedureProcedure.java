@@ -98,7 +98,8 @@ public class DieFeedingProcedureProcedure {
 					(((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
 							.shrink((int) 1);
 				}
-			} else {
+			} else if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemOffhand() : ItemStack.EMPTY)
+					.getItem() == SalmuttotabreabbitlecochicarrochopotatiePieCakeItem.block) {
 				if (sourceentity instanceof LivingEntity) {
 					((LivingEntity) sourceentity).swing(Hand.OFF_HAND, true);
 				}
