@@ -2,134 +2,100 @@ package cz.pisekpiskovec.fundyscursedfood.procedures;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 
-import net.minecraft.world.IWorld;
-import net.minecraft.world.GameType;
-import net.minecraft.util.Hand;
-import net.minecraft.util.DamageSource;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.passive.TameableEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.client.network.play.NetworkPlayerInfo;
-import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
+import net.minecraft.world.level.GameType;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.client.Minecraft;
 
-import java.util.Map;
-import java.util.HashMap;
+import javax.annotation.Nullable;
 
-import cz.pisekpiskovec.fundyscursedfood.item.SalmuttotabreabbitlecochicarrochopotatiePieCakeItem;
-import cz.pisekpiskovec.fundyscursedfood.FundysCursedFoodMod;
+import cz.pisekpiskovec.fundyscursedfood.init.FundysCursedFoodModItems;
 
+@Mod.EventBusSubscriber
 public class DieFeedingProcedureProcedure {
-	@Mod.EventBusSubscriber
-	private static class GlobalTrigger {
-		@SubscribeEvent
-		public static void onRightClickEntity(PlayerInteractEvent.EntityInteract event) {
-			Entity entity = event.getTarget();
-			PlayerEntity sourceentity = event.getPlayer();
-			if (event.getHand() != sourceentity.getActiveHand()) {
-				return;
-			}
-			double i = event.getPos().getX();
-			double j = event.getPos().getY();
-			double k = event.getPos().getZ();
-			IWorld world = event.getWorld();
-			Map<String, Object> dependencies = new HashMap<>();
-			dependencies.put("x", i);
-			dependencies.put("y", j);
-			dependencies.put("z", k);
-			dependencies.put("world", world);
-			dependencies.put("entity", entity);
-			dependencies.put("sourceentity", sourceentity);
-			dependencies.put("event", event);
-			executeProcedure(dependencies);
-		}
+	@SubscribeEvent
+	public static void onRightClickEntity(PlayerInteractEvent.EntityInteract event) {
+		if (event.getHand() != event.getPlayer().getUsedItemHand())
+			return;
+		execute(event, event.getTarget(), event.getPlayer());
 	}
 
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				FundysCursedFoodMod.LOGGER.warn("Failed to load dependency entity for procedure DieFeedingProcedure!");
+	public static void execute(Entity entity, Entity sourceentity) {
+		execute(null, entity, sourceentity);
+	}
+
+	private static void execute(@Nullable Event event, Entity entity, Entity sourceentity) {
+		if (entity == null || sourceentity == null)
 			return;
-		}
-		if (dependencies.get("sourceentity") == null) {
-			if (!dependencies.containsKey("sourceentity"))
-				FundysCursedFoodMod.LOGGER.warn("Failed to load dependency sourceentity for procedure DieFeedingProcedure!");
-			return;
-		}
-		Entity entity = (Entity) dependencies.get("entity");
-		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-		if (!((entity instanceof TameableEntity) ? ((TameableEntity) entity).isTamed() : false)) {
-			if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == SalmuttotabreabbitlecochicarrochopotatiePieCakeItem.block) {
-				if (sourceentity instanceof LivingEntity) {
-					((LivingEntity) sourceentity).swing(Hand.MAIN_HAND, true);
-				}
-				if (entity instanceof LivingEntity) {
-					((LivingEntity) entity).attackEntityFrom(new DamageSource("heartAttack").setDamageBypassesArmor(), (float) Math.pow(2, 24));
-				}
+		if (!(entity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
+			if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
+					.getItem() == FundysCursedFoodModItems.SALMUTTOTABREABBITLECOCHICARROCHOPOTATIE_PIE_CAKE.get()) {
+				if (sourceentity instanceof LivingEntity _entity)
+					_entity.swing(InteractionHand.MAIN_HAND, true);
+				if (entity instanceof LivingEntity _entity)
+					_entity.hurt(new DamageSource("heartAttack").bypassArmor(), (float) Math.pow(2, 24));
 				if (!(new Object() {
 					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayerEntity) {
-							return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.CREATIVE;
-						} else if (_ent instanceof PlayerEntity && _ent.world.isRemote()) {
-							NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
-									.getPlayerInfo(((AbstractClientPlayerEntity) _ent).getGameProfile().getId());
-							return _npi != null && _npi.getGameType() == GameType.CREATIVE;
+						if (_ent instanceof ServerPlayer _serverPlayer) {
+							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
+						} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null && Minecraft
+									.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
 						}
 						return false;
 					}
 				}.checkGamemode(sourceentity) || new Object() {
 					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayerEntity) {
-							return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SPECTATOR;
-						} else if (_ent instanceof PlayerEntity && _ent.world.isRemote()) {
-							NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
-									.getPlayerInfo(((AbstractClientPlayerEntity) _ent).getGameProfile().getId());
-							return _npi != null && _npi.getGameType() == GameType.SPECTATOR;
+						if (_ent instanceof ServerPlayer _serverPlayer) {
+							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SPECTATOR;
+						} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId())
+											.getGameMode() == GameType.SPECTATOR;
 						}
 						return false;
 					}
 				}.checkGamemode(sourceentity))) {
-					(((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
-							.shrink((int) 1);
+					((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)).shrink(1);
 				}
-			} else if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemOffhand() : ItemStack.EMPTY)
-					.getItem() == SalmuttotabreabbitlecochicarrochopotatiePieCakeItem.block) {
-				if (sourceentity instanceof LivingEntity) {
-					((LivingEntity) sourceentity).swing(Hand.OFF_HAND, true);
-				}
-				if (entity instanceof LivingEntity) {
-					((LivingEntity) entity).attackEntityFrom(new DamageSource("heartAttack").setDamageBypassesArmor(), (float) Math.pow(2, 24));
-				}
+			} else if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)
+					.getItem() == FundysCursedFoodModItems.SALMUTTOTABREABBITLECOCHICARROCHOPOTATIE_PIE_CAKE.get()) {
+				if (sourceentity instanceof LivingEntity _entity)
+					_entity.swing(InteractionHand.OFF_HAND, true);
+				if (entity instanceof LivingEntity _entity)
+					_entity.hurt(new DamageSource("heartAttack").bypassArmor(), (float) Math.pow(2, 24));
 				if (!(new Object() {
 					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayerEntity) {
-							return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.CREATIVE;
-						} else if (_ent instanceof PlayerEntity && _ent.world.isRemote()) {
-							NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
-									.getPlayerInfo(((AbstractClientPlayerEntity) _ent).getGameProfile().getId());
-							return _npi != null && _npi.getGameType() == GameType.CREATIVE;
+						if (_ent instanceof ServerPlayer _serverPlayer) {
+							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
+						} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null && Minecraft
+									.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
 						}
 						return false;
 					}
 				}.checkGamemode(sourceentity) || new Object() {
 					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayerEntity) {
-							return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SPECTATOR;
-						} else if (_ent instanceof PlayerEntity && _ent.world.isRemote()) {
-							NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
-									.getPlayerInfo(((AbstractClientPlayerEntity) _ent).getGameProfile().getId());
-							return _npi != null && _npi.getGameType() == GameType.SPECTATOR;
+						if (_ent instanceof ServerPlayer _serverPlayer) {
+							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SPECTATOR;
+						} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId())
+											.getGameMode() == GameType.SPECTATOR;
 						}
 						return false;
 					}
 				}.checkGamemode(sourceentity))) {
-					(((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemOffhand() : ItemStack.EMPTY)).shrink((int) 1);
+					((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)).shrink(1);
 				}
 			}
 		}
