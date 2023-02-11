@@ -1,4 +1,4 @@
-# Fundy's Cursed Food (Forge)
+# Fundy's Cursed Food
 
 This mod adds food from one certain [Fundy's video](https://youtu.be/h9yLFPI4PbY).
 
