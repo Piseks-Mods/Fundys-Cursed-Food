@@ -24,9 +24,9 @@ import cz.pisekpiskovec.fundyscursedfood.init.FundysCursedFoodModItems;
 public class DieFeedingProcedureProcedure {
 	@SubscribeEvent
 	public static void onRightClickEntity(PlayerInteractEvent.EntityInteract event) {
-		if (event.getHand() != event.getPlayer().getUsedItemHand())
+		if (event.getHand() != event.getEntity().getUsedItemHand())
 			return;
-		execute(event, event.getTarget(), event.getPlayer());
+		execute(event, event.getTarget(), event.getEntity());
 	}
 
 	public static void execute(Entity entity, Entity sourceentity) {

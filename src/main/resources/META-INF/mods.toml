@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[40,)"
+loaderVersion="[43,)"
 license="MIT License"
 
 [[mods]]
@@ -17,7 +17,7 @@ Fundy's Cursed Food from his video
 [[dependencies.fundys_cursed_food]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18.2]"
+    versionRange="[1.19.2]"
     ordering="NONE"
     side="BOTH"
 
