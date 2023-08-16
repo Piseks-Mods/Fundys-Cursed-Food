@@ -31,22 +31,13 @@ public class FundysCursedFoodModItems {
 	public static final RegistryObject<Item> STEAKCOCHOP = REGISTRY.register("steakcochop", () -> new SteakcochopItem());
 	public static final RegistryObject<Item> STEAKCOCHICKCHOP = REGISTRY.register("steakcochickchop", () -> new SteakcochickchopItem());
 	public static final RegistryObject<Item> STEAKCOCHICARROCHOP = REGISTRY.register("steakcochicarrochop", () -> new SteakcochicarrochopItem());
-	public static final RegistryObject<Item> STEAKCOCHICARROCHOPIE = REGISTRY.register("steakcochicarrochopie",
-			() -> new SteakcochicarrochopieItem());
-	public static final RegistryObject<Item> STEAKCOCHICARROCHOPIE_PIE = REGISTRY.register("steakcochicarrochopie_pie",
-			() -> new SteakcochicarrochopiePieItem());
-	public static final RegistryObject<Item> STAPPLECOCHICARROCHOPIE_PIE = REGISTRY.register("stapplecochicarrochopie_pie",
-			() -> new StapplecochicarrochopiePieItem());
-	public static final RegistryObject<Item> STABREADLECOCHICARROCHOPIE_PIE = REGISTRY.register("stabreadlecochicarrochopie_pie",
-			() -> new StabreadlecochicarrochopiePieItem());
-	public static final RegistryObject<Item> STABREABBITLECOCHICARROCHOPIE_PIE = REGISTRY.register("stabreabbitlecochicarrochopie_pie",
-			() -> new StabreabbitlecochicarrochopiePieItem());
-	public static final RegistryObject<Item> SALMOTABREABBITLECOCHICARROCHOPIE_PIE = REGISTRY.register("salmotabreabbitlecochicarrochopie_pie",
-			() -> new SalmotabreabbitlecochicarrochopiePieItem());
-	public static final RegistryObject<Item> SALMUTTOTABREABBITLECOCHICARROCHOPIE_PIE = REGISTRY.register("salmuttotabreabbitlecochicarrochopie_pie",
-			() -> new SalmuttotabreabbitlecochicarrochopiePieItem());
-	public static final RegistryObject<Item> SALMUTTOTABREABBITLECOCHICARROCHOPOTATIE_PIE = REGISTRY
-			.register("salmuttotabreabbitlecochicarrochopotatie_pie", () -> new SalmuttotabreabbitlecochicarrochopotatiePieItem());
-	public static final RegistryObject<Item> SALMUTTOTABREABBITLECOCHICARROCHOPOTATIE_PIE_CAKE = REGISTRY
-			.register("salmuttotabreabbitlecochicarrochopotatie_pie_cake", () -> new SalmuttotabreabbitlecochicarrochopotatiePieCakeItem());
+	public static final RegistryObject<Item> STEAKCOCHICARROCHOPIE = REGISTRY.register("steakcochicarrochopie", () -> new SteakcochicarrochopieItem());
+	public static final RegistryObject<Item> STEAKCOCHICARROCHOPIE_PIE = REGISTRY.register("steakcochicarrochopie_pie", () -> new SteakcochicarrochopiePieItem());
+	public static final RegistryObject<Item> STAPPLECOCHICARROCHOPIE_PIE = REGISTRY.register("stapplecochicarrochopie_pie", () -> new StapplecochicarrochopiePieItem());
+	public static final RegistryObject<Item> STABREADLECOCHICARROCHOPIE_PIE = REGISTRY.register("stabreadlecochicarrochopie_pie", () -> new StabreadlecochicarrochopiePieItem());
+	public static final RegistryObject<Item> STABREABBITLECOCHICARROCHOPIE_PIE = REGISTRY.register("stabreabbitlecochicarrochopie_pie", () -> new StabreabbitlecochicarrochopiePieItem());
+	public static final RegistryObject<Item> SALMOTABREABBITLECOCHICARROCHOPIE_PIE = REGISTRY.register("salmotabreabbitlecochicarrochopie_pie", () -> new SalmotabreabbitlecochicarrochopiePieItem());
+	public static final RegistryObject<Item> SALMUTTOTABREABBITLECOCHICARROCHOPIE_PIE = REGISTRY.register("salmuttotabreabbitlecochicarrochopie_pie", () -> new SalmuttotabreabbitlecochicarrochopiePieItem());
+	public static final RegistryObject<Item> SALMUTTOTABREABBITLECOCHICARROCHOPOTATIE_PIE = REGISTRY.register("salmuttotabreabbitlecochicarrochopotatie_pie", () -> new SalmuttotabreabbitlecochicarrochopotatiePieItem());
+	public static final RegistryObject<Item> SALMUTTOTABREABBITLECOCHICARROCHOPOTATIE_PIE_CAKE = REGISTRY.register("salmuttotabreabbitlecochicarrochopotatie_pie_cake", () -> new SalmuttotabreabbitlecochicarrochopotatiePieCakeItem());
 }

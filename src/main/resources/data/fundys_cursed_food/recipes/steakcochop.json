@@ -1,6 +1,7 @@
 {
-  "group": "steakcochop",
   "type": "minecraft:crafting_shapeless",
+  "group": "steakcochop",
+  "category": "misc",
   "ingredients": [
     {
       "item": "fundys_cursed_food:steakchop"

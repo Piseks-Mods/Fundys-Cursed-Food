@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "fundys_cursed_food:items/steakcochicarrochop"
+    "layer0": "fundys_cursed_food:item/steakcochicarrochop"
   }
 }

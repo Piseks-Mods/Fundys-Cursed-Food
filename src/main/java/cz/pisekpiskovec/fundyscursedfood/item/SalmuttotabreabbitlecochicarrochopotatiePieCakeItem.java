@@ -16,14 +16,10 @@ import net.minecraft.network.chat.Component;
 import java.util.List;
 
 import cz.pisekpiskovec.fundyscursedfood.procedures.DieEatingProcedureProcedure;
-import cz.pisekpiskovec.fundyscursedfood.init.FundysCursedFoodModTabs;
 
 public class SalmuttotabreabbitlecochicarrochopotatiePieCakeItem extends Item {
 	public SalmuttotabreabbitlecochicarrochopotatiePieCakeItem() {
-		super(new Item.Properties().tab(FundysCursedFoodModTabs.TAB_CREATIVE_TAB).stacksTo(64).rarity(Rarity.COMMON)
-				.food((new FoodProperties.Builder()).nutrition(81).saturationMod(79.60000000000001f)
-
-						.meat().build()));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(81).saturationMod(79.6f).meat().build()));
 	}
 
 	@Override
@@ -44,7 +40,6 @@ public class SalmuttotabreabbitlecochicarrochopotatiePieCakeItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-
 		DieEatingProcedureProcedure.execute(entity);
 		return retval;
 	}

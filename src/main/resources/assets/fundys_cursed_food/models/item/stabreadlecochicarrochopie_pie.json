@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "fundys_cursed_food:items/stabreadlecochicarrochopie_pie"
+    "layer0": "fundys_cursed_food:item/stabreadlecochicarrochopie_pie"
   }
 }

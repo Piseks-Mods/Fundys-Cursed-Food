@@ -11,14 +11,9 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
-import cz.pisekpiskovec.fundyscursedfood.init.FundysCursedFoodModTabs;
-
 public class StabreabbitlecochicarrochopiePieItem extends Item {
 	public StabreabbitlecochicarrochopiePieItem() {
-		super(new Item.Properties().tab(FundysCursedFoodModTabs.TAB_CREATIVE_TAB).stacksTo(64).rarity(Rarity.COMMON)
-				.food((new FoodProperties.Builder()).nutrition(56).saturationMod(62f)
-
-						.meat().build()));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(56).saturationMod(62f).meat().build()));
 	}
 
 	@Override

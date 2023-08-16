@@ -1,6 +1,7 @@
 {
-  "group": "steakchop",
   "type": "minecraft:crafting_shapeless",
+  "group": "steakchop",
+  "category": "misc",
   "ingredients": [
     {
       "item": "minecraft:cooked_beef"

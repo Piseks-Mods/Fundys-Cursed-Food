@@ -1,6 +1,7 @@
 {
-  "group": "stapplecochicarrochopie_pie",
   "type": "minecraft:crafting_shapeless",
+  "group": "stapplecochicarrochopie_pie",
+  "category": "misc",
   "ingredients": [
     {
       "item": "fundys_cursed_food:steakcochicarrochopie_pie"

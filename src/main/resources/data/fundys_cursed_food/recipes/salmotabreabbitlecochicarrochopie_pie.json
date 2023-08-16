@@ -1,6 +1,7 @@
 {
-  "group": "salmotabreabbitlecochicarrochopie_pie",
   "type": "minecraft:crafting_shapeless",
+  "group": "salmotabreabbitlecochicarrochopie_pie",
+  "category": "misc",
   "ingredients": [
     {
       "item": "fundys_cursed_food:stabreabbitlecochicarrochopie_pie"

@@ -1,10 +1,12 @@
 {
-  "_fv": 34,
+  "_fv": 45,
   "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "stabreadlecochicarrochopie_pie",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Stabreadlecochicarrochopie Pie",
     "rarity": "COMMON",
     "creativeTab": {

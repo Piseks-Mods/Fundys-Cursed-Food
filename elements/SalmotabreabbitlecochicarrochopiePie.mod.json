@@ -1,10 +1,12 @@
 {
-  "_fv": 34,
+  "_fv": 45,
   "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "salmotabreabbitlecochicarrochopie_pie",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Salmotabreabbitlecochicarrochopie Pie",
     "rarity": "COMMON",
     "creativeTab": {
