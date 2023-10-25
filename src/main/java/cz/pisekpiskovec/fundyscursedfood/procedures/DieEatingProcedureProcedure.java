@@ -1,5 +1,6 @@
 package cz.pisekpiskovec.fundyscursedfood.procedures;
 
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
@@ -15,7 +16,20 @@ public class DieEatingProcedureProcedure {
 			_entity.hurt(new DamageSource(_entity.level().registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.GENERIC)) {
 				@Override
 				public Component getLocalizedDeathMessage(LivingEntity _msgEntity) {
-					return Component.translatable("death.attack." + "heartAttack");
+					String _translatekey = "death.attack." + "heartAttack";
+					if (this.getEntity() == null && this.getDirectEntity() == null) {
+						return _msgEntity.getKillCredit() != null
+								? Component.translatable(_translatekey + ".player", _msgEntity.getDisplayName(), _msgEntity.getKillCredit().getDisplayName())
+								: Component.translatable(_translatekey, _msgEntity.getDisplayName());
+					} else {
+						Component _component = this.getEntity() == null ? this.getDirectEntity().getDisplayName() : this.getEntity().getDisplayName();
+						ItemStack _itemstack = ItemStack.EMPTY;
+						if (this.getEntity() instanceof LivingEntity _livingentity)
+							_itemstack = _livingentity.getMainHandItem();
+						return !_itemstack.isEmpty() && _itemstack.hasCustomHoverName()
+								? Component.translatable(_translatekey + ".item", _msgEntity.getDisplayName(), _component, _itemstack.getDisplayName())
+								: Component.translatable(_translatekey, _msgEntity.getDisplayName(), _component);
+					}
 				}
 			}, (float) Math.pow(2, 24));
 	}

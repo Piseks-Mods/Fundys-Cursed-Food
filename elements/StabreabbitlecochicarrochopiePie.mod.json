@@ -1,5 +1,5 @@
 {
-  "_fv": 45,
+  "_fv": 51,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -26,10 +26,11 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [
-      "stop."
-    ],
-    "hasGlow": false,
+    "specialInformation": {
+      "fixedValue": [
+        "stop."
+      ]
+    },
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,

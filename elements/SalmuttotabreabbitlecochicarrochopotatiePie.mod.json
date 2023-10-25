@@ -1,5 +1,5 @@
 {
-  "_fv": 45,
+  "_fv": 51,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -26,10 +26,14 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [
-      "§6dude it's seriously glowing."
-    ],
-    "hasGlow": true,
+    "specialInformation": {
+      "fixedValue": [
+        "§6dude it's seriously glowing."
+      ]
+    },
+    "glowCondition": {
+      "fixedValue": true
+    },
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,

@@ -434,7 +434,7 @@
   "workspaceSettings": {
     "modid": "fundys_cursed_food",
     "modName": "Fundy\u0027s Cursed Food",
-    "version": "1.0.4.1a1",
+    "version": "1.0.4.1b1",
     "description": "Fundy\u0027s Cursed Food from his video",
     "author": "Písek Pískovec",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/fundys-cursed-food",
@@ -451,5 +451,5 @@
     "modElementsPackage": "cz.pisekpiskovec.fundyscursedfood",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202300333711
+  "mcreatorVersion": 202300439517
 }
